@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <linearGradient id="callyBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="55%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="callyBubble" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+    <linearGradient id="callyCheck" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="callyGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="112" fill="url(#callyBg)"/>
+
+  <!-- Subtle inner highlight -->
+  <rect x="4" y="4" width="504" height="504" rx="108" 
+        fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+
+  <!-- Chat bubble forming a "C" shape -->
+  <path 
+    d="M 356 148
+       C 320 118 274 104 226 104
+       C 138 104 68 174 68 260
+       C 68 346 138 416 226 416
+       C 274 416 320 402 356 372
+       L 320 316
+       C 298 336 264 348 226 348
+       C 174 348 136 308 136 260
+       C 136 212 174 172 226 172
+       C 264 172 298 184 320 204
+       Z" 
+    fill="url(#callyBubble)"
+    filter="url(#callyGlow)"/>
+
+  <!-- Tail of the chat bubble -->
+  <path 
+    d="M 132 384 L 88 428 C 84 432 88 440 94 438 L 164 416 Z" 
+    fill="url(#callyBubble)"/>
+
+  <!-- Checkmark inside the bubble (verified/certified) -->
+  <path 
+    d="M 210 264 L 250 304 L 330 224" 
+    stroke="url(#callyCheck)" 
+    stroke-width="26" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+    fill="none"/>
+
+  <!-- Small accent dot (AI / sparkle) -->
+  <circle cx="388" cy="152" r="14" fill="#22d3ee"/>
+  <circle cx="388" cy="152" r="6" fill="#ffffff"/>
+</svg>
